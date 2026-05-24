@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.clockworklabs.spacetimedbsdk": {
-      "version": "https://github.com/clockworklabs/com.clockworklabs.spacetimedbsdk.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "0ae283d8fe000b54547d40ba6011508101b1d130"
-    },
     "com.coffee.ui-effect": {
       "version": "https://github.com/mob-sakai/UIEffect.git?path=Packages/src",
       "depth": 0,
@@ -258,7 +251,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.39",
+      "version": "3.0.40",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -344,7 +337,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.recorder": {
-      "version": "5.1.4",
+      "version": "5.1.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {

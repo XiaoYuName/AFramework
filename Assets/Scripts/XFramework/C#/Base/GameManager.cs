@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
-using SpacetimeDB.Types;
 using UnityEngine;
 
 namespace XFramework
@@ -36,8 +35,7 @@ namespace XFramework
             await AudioManager.Instance.Initialized();
             await UISystem.Instance.Initialized();
             var task1 = XLuaManager.Instance.Initialized();
-            var task2 = GunmanNetworkManager.Instance.Initialized();
-            await UniTask.WhenAll(task1,task2);
+            await UniTask.WhenAll(task1);
         }
 
         public void StarGame()

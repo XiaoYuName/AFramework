@@ -63,12 +63,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Lua
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5a01a3b4f53f3e94480207783b06fa8d
-    m_Address: Assets/AddressableAssets/xLua/UI/CommonUI/CommonUI.lua.txt
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Lua
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 677861f0e161a684db210f46f245c007
     m_Address: Assets/AddressableAssets/xLua/System/Util.lua.txt
     m_ReadOnly: 0

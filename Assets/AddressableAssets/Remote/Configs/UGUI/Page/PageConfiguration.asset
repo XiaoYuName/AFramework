@@ -21,32 +21,4 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Pages:
-  - PathID: CommonUI
-    PagePath: Assets/AddressableAssets/Remote/UGUI/CommonUI/CommonUI.prefab
-    UICanvas: 0
-    UIParent: 0
-    isTween: 0
-    isXLua: 1
-    xLuaPath: UI/CommonUI/CommonUI
-  - PathID: LoginUI
-    PagePath: Assets/AddressableAssets/Remote/UGUI/LoginUI/LoginUI.prefab
-    UICanvas: 0
-    UIParent: 0
-    isTween: 0
-    isXLua: 0
-    xLuaPath: 
-  - PathID: PopLoadingUI
-    PagePath: Assets/AddressableAssets/Remote/UGUI/PopLoadingUI/PopLoadingUI.prefab
-    UICanvas: 0
-    UIParent: 3
-    isTween: 0
-    isXLua: 0
-    xLuaPath: 
-  - PathID: GunmanGamePlayerUI
-    PagePath: Assets/AddressableAssets/Remote/UGUI/GunmanGamePlayerUI/GunmanGamePlayerUI.prefab
-    UICanvas: 0
-    UIParent: 0
-    isTween: 0
-    isXLua: 0
-    xLuaPath: 
+  Pages: []

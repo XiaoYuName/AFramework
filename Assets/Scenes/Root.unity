@@ -1247,7 +1247,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f207a0dd345419b4a82fc63b78de0938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunmanNetworkManager
+  networkDataManager: {fileID: 0}
+  currentNetworkData:
+    ServerName: 
+    DatabaseName: 
+    Url: 
   isNewUser: 1
+  <Token>k__BackingField: 
+  isConnection: 0
+  isConnectionError: 0
 --- !u!1 &1289844090
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,14 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Remote-UGUI-PopLoadingUI
+  m_Name: Localization-String-Tables-Chinese (Simplified) (zh-CN)
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Remote-UGUI-PopLoadingUI
-  m_GUID: ef78987d9a5db4344aa4b205a5b9f3c1
-  m_SerializeEntries: []
-  m_ReadOnly: 0
+  m_GroupName: Localization-String-Tables-Chinese (Simplified) (zh-CN)
+  m_GUID: 45af14870d7e0cc418691be82cff80c2
+  m_SerializeEntries:
+  - m_GUID: 78e04d7c78c98ce4a838b54fdfaecc78
+    m_Address: UIText_zh-CN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-CN
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 16e42000d8ee199428f26216c3eb2c2e, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: b8e78e42755df5749a3ab9225fd1ae4e, type: 2}
-    - {fileID: 11400000, guid: 23516470311419f43b89476925146d9c, type: 2}
+    - {fileID: 11400000, guid: f4507f22b9343f24fb3a147c3d2fc202, type: 2}
+    - {fileID: 11400000, guid: 51f7043c6d6620840b5cf6b9903631a9, type: 2}
