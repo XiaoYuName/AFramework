@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace XFramework
 {
@@ -11,8 +12,7 @@ namespace XFramework
     /// </summary>
     public class GameManager : MonoOdinSingleton<GameManager>
     {
-        [BoxGroup("热更新"),LabelText("本地Canvas 面板")]
-        public Canvas LocalCanvas;
+        public CommonUI _commonUI;
         
         protected override void Awake()
         {
@@ -22,42 +22,23 @@ namespace XFramework
 
         private void Start()
         {
-            HotUpdate();
-        }
-
-        private void HotUpdate()
-        {
-            AddressableManager.Instance.Initialized().Forget();
+            Initialized().Forget();
         }
         
         public async UniTask Initialized()
         {
+            await Addressables.InitializeAsync();
             await AudioManager.Instance.Initialized();
             await UISystem.Instance.Initialized();
-            var task1 = XLuaManager.Instance.Initialized();
-            await UniTask.WhenAll(task1);
+            StarGame();
         }
 
-        public void StarGame()
+        private void StarGame()
         {
-            AddressableManager.Instance.Release().Forget();
-            LocalCanvas.gameObject.SetActive(false);
-            LuaUISystem.Instance.OpenUI("CommonUI");
+            _commonUI.Init();
             AudioManager.Instance.PlayAudio("HomeBGM");
         }
-
-        #region 进入游戏主体
-
-        public void EnterGunmanGame()
-        {
-           
-        }
-        public void QuitGunmanGame()
-        {
-            
-        }
-
-        #endregion
+        
     }
 }
 

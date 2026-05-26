@@ -5,7 +5,6 @@ using System.IO;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using XLua;
 
 namespace XFramework
 {
@@ -18,7 +17,6 @@ namespace XFramework
     /// <summary>
     /// UI系统总管理器
     /// </summary>
-    [LuaCallCSharp]
     public class UISystem : MonoOdinSingleton<UISystem>,IGameInitialized
     {
         [BoxGroup("Initialized"),LabelText("配置路径"),FilePath]
@@ -125,6 +123,16 @@ namespace XFramework
 
         #region 底层框架
 
+        public void AddUI(string uiPage,UIBase uiBase)
+        {
+            if (!uiDictionary.ContainsKey(uiPage))
+            {
+                uiDictionary.Add(uiPage, uiBase.gameObject);
+                return;
+            }
+           
+        }
+
         /// <summary>
         /// 获取UI
         /// </summary>
@@ -196,7 +204,6 @@ namespace XFramework
         /// 打开UI界面
         /// </summary>
         /// <param name="uiPage">界面名称</param>
-        [LuaCallCSharp]
         public void OpenUI(string uiPage)
         {
             UIBase ui = GetUI<UIBase>(uiPage);
@@ -428,15 +435,6 @@ namespace XFramework
             }
             uiDictionary.Add(uiPage,Obj);
             return uiBase;
-        }
-
-        #endregion
-        
-        #region XLua
-
-        public List<UIPageItem> GetUIPages()
-        {
-            return pageConfiguration.Pages;
         }
 
         #endregion

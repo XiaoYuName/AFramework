@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using XLua;
 using Object = UnityEngine.Object;
 
 namespace XFramework
@@ -407,28 +406,6 @@ namespace XFramework
                 SceneDic.Remove(key);
                 loader.Release();
             }
-        }
-
-
-        #endregion
-        
-        #region 桥接Lua的函数
-        [LuaCallCSharp]
-        public void LoadAssetsAsyncWrapper(string key, Action<Object> onCompleteAction)
-        {
-            LoadAssetsAsync(key, new LoadCallBack<Object>(onCompleteAction));
-        }
-
-        [LuaCallCSharp]
-        public GameObject LoadGameObject(string key)
-        {
-            return LoadAssets<GameObject>(key);
-        }
-        
-        [LuaCallCSharp]
-        public Sprite LoadSprite(string key)
-        {
-            return  LoadAssets<Sprite>(key);
         }
 
 
