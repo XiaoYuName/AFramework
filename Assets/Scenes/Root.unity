@@ -291,6 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383863092}
   - component: {fileID: 383863093}
+  - component: {fileID: 383863094}
   m_Layer: 0
   m_Name: XAudioManager
   m_TagString: Untagged
@@ -339,6 +340,49 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   ConfigPath: Assets/AddressableAssets/Remote/Configs/Audio/AudioConfiguration.asset
+--- !u!114 &383863094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383863091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0115afa0f9d71f4e98487359ca33a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AGVButton
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointDown:
+    m_PersistentCalls:
+      m_Calls: []
+  animator: {fileID: 0}
+  OnPointEnter: {fileID: 0}
+  OnPointExit: {fileID: 0}
+  OnPointClick: {fileID: 0}
+  OnPointClickDown: {fileID: 0}
+  OnPointClickUp: {fileID: 0}
+  isPointEnterClip: 0
+  OnPointEnterClip: {fileID: 0}
+  isPointExitClip: 0
+  OnPointExitClip: {fileID: 0}
+  isPointClickClip: 0
+  OnPointClickClip: {fileID: 0}
+  isPointClickDownClip: 0
+  OnPointClickDownClip: {fileID: 0}
+  isPointClickUpClip: 0
+  OnPointClickUpClip: {fileID: 0}
 --- !u!1 &396639543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,59 +1247,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 2bc5656680864a44ca04919389c22673, type: 2}
---- !u!1 &952214090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 952214091}
-  - component: {fileID: 952214093}
-  m_Layer: 0
-  m_Name: GunmanGameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &952214091
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952214090}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2027759317}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &952214093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952214090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f207a0dd345419b4a82fc63b78de0938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GunmanNetworkManager
-  networkDataManager: {fileID: 0}
-  currentNetworkData:
-    ServerName: 
-    DatabaseName: 
-    Url: 
-  isNewUser: 1
-  <Token>k__BackingField: 
-  isConnection: 0
-  isConnectionError: 0
 --- !u!1 &1289844090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,63 +1537,6 @@ Transform:
   - {fileID: 935659786}
   m_Father: {fileID: 2027759317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1654719433
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1654719434}
-  - component: {fileID: 1654719435}
-  - component: {fileID: 1654719437}
-  m_Layer: 0
-  m_Name: XNetWorkManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1654719434
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654719433}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2027759317}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1654719435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654719433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e016ef92e52934343857fd26e55140c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: com.clockworklabs.spacetimedbsdk::SpacetimeDB.SpacetimeDBNetworkManager
---- !u!114 &1654719437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654719433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deb46fd9f49d91e46aedad55437ffedd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UserNetworkManager
 --- !u!1 &2027759316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,8 +1579,6 @@ Transform:
   - {fileID: 1604166142}
   - {fileID: 691142545}
   - {fileID: 383863092}
-  - {fileID: 1654719434}
-  - {fileID: 952214091}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2027759318
