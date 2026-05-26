@@ -21,4 +21,9 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Pages: []
+  Pages:
+  - PathID: 
+    PagePath: 
+    UICanvas: 0
+    UIParent: 0
+    isTween: 0

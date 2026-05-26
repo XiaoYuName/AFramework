@@ -24,7 +24,7 @@ MonoBehaviour:
   DataList:
   - audioID: HomeBGM
     audioType: 0
-    audioClip: {fileID: 8300000, guid: 0ecade790dea42142a36838677785f8c, type: 3}
+    audioClip: {fileID: 0}
     InitVolume: 1
     soundPitchMin: 1
     soundPitchMax: 1.2
