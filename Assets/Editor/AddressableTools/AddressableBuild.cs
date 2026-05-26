@@ -28,16 +28,6 @@ namespace UniTaskFramework
         /// </summary>
         private static AddressableAssetGroup currentGroup;
         
-        
-        [MenuItem("Tools/1.自动打XLua Addressable")]
-        public static void BuildXLua()
-        {
-            GetConfiguration();
-            if (_config == null) return;
-            currentGroup = _config.XLuaSettings;
-            BuildPathXlua("Removte-",_config.xLuaOutPutPath);
-        }
-        
         [MenuItem("Tools/4.自动打包Addressable")]
         public static void Build()
         {
@@ -47,11 +37,6 @@ namespace UniTaskFramework
             //BuildPath("Local-",_config.LocalAssetPath);
             currentGroup = _config.RemoteAssetSettings;
             BuildPath("Remote-",_config.RemoteAssetPath);
-
-            ConvertXluaToTextAssets();
-            BuildXLua();
-            currentGroup = _config.XLuaSettings;
-            BuildPathXlua("Remote-",_config.xLuaOutPutPath);
         }
         
 
@@ -68,8 +53,6 @@ namespace UniTaskFramework
             for (int i = 0; i < Directores.Length; i++)
             {
                 string fullpath =  Path.GetFullPath(Directores[i]);
-                string xluapath = Path.GetFullPath(_config.xLuaOutPutPath);
-                if(fullpath.Equals(xluapath))continue;
                 DirectoryInfo directoryInfo = new DirectoryInfo(Directores[i]);
                 groupName = groupprefix+directoryInfo.Name;
                 DirectoriesBuild(Directores[i],groupName);
@@ -187,126 +170,6 @@ namespace UniTaskFramework
             string UnityPath = path.Substring(past);
             return UnityPath;
         }
-
-
-        #region Xlua
-        
-        [MenuItem("Tools/5.一键转为lua为TextAssets文件")]
-        public static void ConvertXluaToTextAssets()
-        {
-            GetConfiguration();
-            if (Directory.Exists(_config.xLuaPath))
-            {
-                string[] directores = Directory.GetDirectories(_config.xLuaPath);
-
-                string[] files = Directory.GetFiles(_config.xLuaPath);
-                files = files.Where(file => !file.EndsWith(".meta")).ToArray();
-                if (files.Length > 0)
-                {
-                    for (int i = 0; i < files.Length; i++)
-                    {
-                        FileInfo fileInfo = new FileInfo(files[i]);
-                        string newfile = _config.xLuaOutPutPath + "/" + fileInfo.Name + ".txt";
-                        File.Copy(files[i], newfile, true);
-                    }
-                }
-
-                if (directores.Length > 0)
-                {
-                    for (int i = 0; i < directores.Length; i++)
-                    {
-                        CopyDirectoryFile(directores[i]);
-                    }
-                }
-            }
-
-            AssetDatabase.Refresh();
-        }
-
-        /// <summary>
-        /// 对给定路径下的文件进行Coyp到目标制定文件夹
-        /// </summary>
-        /// <param name="directiory">路径</param>
-        private static void CopyDirectoryFile(string directiory)
-        {
-            string[] directores = Directory.GetDirectories(directiory);
-
-            string[] files = Directory.GetFiles(directiory);
-            files = files.Where(file => !file.EndsWith(".meta")).ToArray();
-            if (files.Length > 0)
-            {
-                for (int i = 0; i < files.Length; i++)
-                {
-                    FileInfo fileInfo = new FileInfo(files[i]);
-                    string[] temp = directiory.Split("/Lua");
-                    string newdirector = _config.xLuaOutPutPath + temp[^1];
-                    if (!Directory.Exists(newdirector))
-                    {
-                        Directory.CreateDirectory(newdirector);
-                    }
-                    string newfile = newdirector + "/" + fileInfo.Name + ".txt";
-                    File.Copy(files[i], newfile, true);
-                }
-            }
-
-            if (directores.Length > 0)
-            {
-                for (int i = 0; i < directores.Length; i++)
-                {
-                    CopyDirectoryFile(directores[i]);
-                }
-            }
-        }
-
-
-        /// <summary>
-        /// 对所给定路径进行遍历
-        /// </summary>
-        /// <param name="groupprefix">组的前缀</param>
-        /// <param name="path">路径</param>
-        public static void BuildPathXlua(string groupprefix,string path)
-        {
-            //1.遍历到所有的文件夹
-            DirectoryInfo directoryInfo = new DirectoryInfo(path);
-            xluagroup = groupprefix+directoryInfo.Name;
-            DirectoriesBuildXlua(path);
-        }
-
-        /// <summary>
-        /// 对所给定路径进行递归遍历和文件打包
-        /// </summary>
-        /// <param name="path">路径</param>
-        private static void DirectoriesBuildXlua(string path)
-        {
-            //1.对路径内的文件进行打包操作
-            string[] files = Directory.GetFiles(path);
-            files = files.Where(file => !file.EndsWith(".meta")).ToArray();
-            if (files.Length > 0)
-            {
-                for (int i = 0; i < files.Length; i++)
-                {
-                    FileInfo fileInfo = new FileInfo(files[i]);
-                    DirectoryInfo directoryInfo = fileInfo.Directory;
-                    if (directoryInfo != null)
-                    {
-                        Object Obj = AssetDatabase.LoadAssetAtPath<Object>(ToUnityPath(files[i]));
-                        Debug.Log($"创建Addressable标签: 物体=>{Obj.name} groupname=>{xluagroup}");
-                        SetAddressableTag(Obj,xluagroup,"Lua");
-                    }
-                }
-            }
-            //2.对文件夹进行递归遍历操作
-            string[] paths = Directory.GetDirectories(path);
-            if (paths.Length > 0)
-            {
-                for (int i = 0; i < paths.Length; i++)
-                {
-                    DirectoriesBuildXlua(paths[i]);
-                }
-            }
-        }
-
-        #endregion
         
         [MenuItem("Tools/6.清空Addressable标签内容")]
         public static void ClearBuild()

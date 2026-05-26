@@ -19,22 +19,6 @@ namespace UniTaskFramework
         public string RemoteAssetPath;
         [FoldoutGroup("Addressable配置/分包资源"),AssetsOnly,LabelText("打包预设信息")]
         public  AddressableAssetGroup RemoteAssetSettings;
-        
-        
-        /// <summary>
-        /// xlua原始脚本路径
-        /// </summary>
-        [FoldoutGroup("Addressable配置/XLua设置"),FolderPath,LabelText("Lua脚本路径")]
-        public string xLuaPath;
-
-        /// <summary>
-        /// xlua导出脚本路径
-        /// </summary>
-        [FoldoutGroup("Addressable配置/XLua设置"),FolderPath,LabelText("转换后路径")]
-        public string xLuaOutPutPath;
-        
-        [FoldoutGroup("Addressable配置/XLua设置")]
-        public AddressableAssetGroup XLuaSettings;
     }
 }
 
