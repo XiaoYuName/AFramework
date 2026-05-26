@@ -38,11 +38,6 @@ namespace XFramework
         public UIParentLayer UIParent;
         [LabelText("",SdfIconType.Play),Space,FoldoutGroup("Page"),Tooltip("选中OpenUI时会播放缩放动画")]
         public bool isTween;
-        [LabelText("XLua"),FoldoutGroup("Page"),BoxGroup("Page/Lua")]
-        public bool isXLua;
-        [ShowIf("@isXLua"),LabelText("路径"),GUIColor("GetPathColor"),FoldoutGroup("Page")
-        ,BoxGroup("Page/Lua"),FilePath]
-        public string xLuaPath;
 
 
         /// <summary>
