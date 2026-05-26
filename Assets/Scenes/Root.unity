@@ -291,7 +291,6 @@ GameObject:
   m_Component:
   - component: {fileID: 383863092}
   - component: {fileID: 383863093}
-  - component: {fileID: 383863094}
   m_Layer: 0
   m_Name: XAudioManager
   m_TagString: Untagged
@@ -340,49 +339,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   ConfigPath: Assets/AddressableAssets/Remote/Configs/Audio/AudioConfiguration.asset
---- !u!114 &383863094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383863091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0115afa0f9d71f4e98487359ca33a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AGVButton
-  OnEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointUp:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointDown:
-    m_PersistentCalls:
-      m_Calls: []
-  animator: {fileID: 0}
-  OnPointEnter: {fileID: 0}
-  OnPointExit: {fileID: 0}
-  OnPointClick: {fileID: 0}
-  OnPointClickDown: {fileID: 0}
-  OnPointClickUp: {fileID: 0}
-  isPointEnterClip: 0
-  OnPointEnterClip: {fileID: 0}
-  isPointExitClip: 0
-  OnPointExitClip: {fileID: 0}
-  isPointClickClip: 0
-  OnPointClickClip: {fileID: 0}
-  isPointClickDownClip: 0
-  OnPointClickDownClip: {fileID: 0}
-  isPointClickUpClip: 0
-  OnPointClickUpClip: {fileID: 0}
 --- !u!1 &396639543
 GameObject:
   m_ObjectHideFlags: 0
