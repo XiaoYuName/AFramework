@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,6 +24,24 @@ public class AGVButton : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,
     [LabelText("鼠标按下事件"),FoldoutGroup("事件")]
     public UnityEvent OnPointDown;
 
+    #endregion
+
+    #region DoTween
+    [FoldoutGroup("Tween动画"),LabelText("鼠标移入")]
+    public DOTweenAnimation OnPointEnterTween;
+
+    [FoldoutGroup("Tween动画"),LabelText("鼠标移出")]
+    public DOTweenAnimation OnPointExitTween;
+    
+    [FoldoutGroup("Tween动画"),LabelText("鼠标点击")]
+    public DOTweenAnimation OnPointClickTween;
+    
+    [FoldoutGroup("Tween动画"),LabelText("鼠标按下")]
+    public DOTweenAnimation OnPointClickDownTween;
+    
+    [FoldoutGroup("Tween动画"),LabelText("鼠标抬起")]
+    public DOTweenAnimation OnPointClickUpTween;
+    
     #endregion
 
     #region Animation
@@ -77,6 +96,8 @@ public class AGVButton : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,
         {
             AudioManager.Instance.PlayAudio(OnPointEnterClip,AudioType.Music);
         }
+
+        OnPointEnterTween?.DOPlay();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -86,6 +107,8 @@ public class AGVButton : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,
         {
             AudioManager.Instance.PlayAudio(OnPointExitClip,AudioType.Music);
         }
+        
+        OnPointExitTween?.DOPlay();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -95,6 +118,8 @@ public class AGVButton : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,
         {
             AudioManager.Instance.PlayAudio(OnPointClickDownClip,AudioType.Music);
         }
+        
+        OnPointClickDownTween?.DOPlay();
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -104,6 +129,8 @@ public class AGVButton : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,
         {
             AudioManager.Instance.PlayAudio(OnPointClickUpClip,AudioType.Music);
         }
+        
+        OnPointClickUpTween?.DOPlay();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -113,11 +140,7 @@ public class AGVButton : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,
         {
             AudioManager.Instance.PlayAudio(OnPointClickClip,AudioType.Music);
         }
+        
+        OnPointClickTween?.DOPlay();
     }
-}
-
-public enum ButtonAnimationType
-{
-    DoTween = 0,
-    Animation = 1,
 }
