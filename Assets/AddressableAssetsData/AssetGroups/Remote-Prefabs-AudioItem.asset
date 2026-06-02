@@ -10,14 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Remote-Prefabs-CommonUI
+  m_Name: Remote-Prefabs-AudioItem
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Remote-Prefabs-CommonUI
-  m_GUID: 5052d6e3a052b114eb1c8d94cb3d8a93
-  m_SerializeEntries: []
+  m_GroupName: Remote-Prefabs-AudioItem
+  m_GUID: bca5e3116669602438982c8512f605af
+  m_SerializeEntries:
+  - m_GUID: e89236724e3027c4ebeab4e148393fea
+    m_Address: Assets/AddressableAssets/Remote/Prefabs/AudioItem/MusicSource.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 16e42000d8ee199428f26216c3eb2c2e, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: e80529155c424e2499c6dcbc8fb84de8, type: 2}
-    - {fileID: 11400000, guid: c292a733065d7c147a23a85ae45d893a, type: 2}
+    - {fileID: 11400000, guid: 6108847e151bc2e47bd013530a39fa9d, type: 2}
+    - {fileID: 11400000, guid: 992788e4cdc517f48995d19d86626d70, type: 2}

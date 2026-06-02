@@ -61,4 +61,4 @@ MonoBehaviour:
     Snapshot: {fileID: -5600504530818870087, guid: 4ea25540cc73f4f4b8b22fb3aeb097e6, type: 2}
   - Type: 3
     Snapshot: {fileID: 2056470108741604723, guid: 4ea25540cc73f4f4b8b22fb3aeb097e6, type: 2}
-  MusicSourcePath: Assets/AddressableAssets/Remote/Assets/Prefab/AudioItem/MusicSource.prefab
+  MusicSourcePath: Assets/AddressableAssets/Remote/Prefabs/AudioItem/MusicSource.prefab

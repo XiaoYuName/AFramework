@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Remote-Assets-Prefab-AudioItem
   m_GUID: 3a3cfd3a9a50aee44b3f25ae792b7eb9
-  m_SerializeEntries:
-  - m_GUID: e89236724e3027c4ebeab4e148393fea
-    m_Address: Assets/AddressableAssets/Remote/Assets/Prefab/AudioItem/MusicSource.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 16e42000d8ee199428f26216c3eb2c2e, type: 2}
   m_SchemaSet:
