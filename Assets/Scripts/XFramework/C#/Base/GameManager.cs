@@ -30,12 +30,13 @@ namespace XFramework
             await Addressables.InitializeAsync();
             await AudioManager.Instance.Initialized();
             await UISystem.Instance.Initialized();
+            await ExcelMgr.Instance.Initialized();
             StarGame();
         }
 
         private void StarGame()
-        { 
-            //CharacterLevelDataHelper.GetAll()
+        {
+            
         }
         
     }
