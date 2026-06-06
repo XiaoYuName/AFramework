@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: Localization-Locales
   m_GUID: 38dc7905149512a46af5bdb2cbb04844
   m_SerializeEntries:
-  - m_GUID: 48eccc8473e9bd5439838d7db5eeae28
-    m_Address: Chinese (Traditional, Hong Kong SAR China) (zh-HK)
+  - m_GUID: 2f3e51b97006064449e26aea5d591b96
+    m_Address: Korean (ko)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
@@ -29,6 +29,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c636e3b0b0a6c8a4788b380e5c1f88c8
     m_Address: English (en)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ddd4966bbd9a92946a56add9b0bb5504
+    m_Address: Japanese (Japan) (ja-JP)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale

@@ -34,9 +34,8 @@ namespace XFramework
         }
 
         private void StarGame()
-        {
-            _commonUI.Init();
-            AudioManager.Instance.PlayAudio("HomeBGM");
+        { 
+            //CharacterLevelDataHelper.GetAll()
         }
         
     }
