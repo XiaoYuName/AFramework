@@ -66,6 +66,9 @@ public class MainUI : UIBase
 
     public void LoadGameMap()
     {
-        AssetsManager.Instance.LoadScene("Assets/AddressableAssets/Remote/Scenes/WordMap.unity",LoadSceneMode.Additive);
+        // var data = GameDataManager.Instance.MinGameSceneData.GetDataByID(GameDataManager.Instance.CurrentUser.minSceneID);
+        // UISystem.Instance.CloseUI(data.page_id);
+        // AssetsManager.Instance.ULoadSceneAsync(data.scenePath);
+        // AssetsManager.Instance.LoadScene("Assets/AddressableAssets/Remote/Scenes/WordMap.unity",LoadSceneMode.Additive);
     }
 }

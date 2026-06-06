@@ -76,6 +76,16 @@ public class GameDataManager : MonoSingleton<GameDataManager>,IGameInitialized
 
     #region 场景切换
 
+    public void EnterGameScene(string sceneID)
+    {
+        CurrentUser.SceneID = sceneID;
+        var data = GameSceneData.GetDataByID(sceneID);
+        if (data != null)
+        {
+            EnterGameScene(sceneID,data.min_sceneList[0]);
+        }
+    }
+
     public void EnterGameScene(string sceneID, string minSceneID)
     {
         CurrentUser.SceneID = sceneID;

@@ -22,11 +22,6 @@ public class WordSceneItem : GameBase
 
     public void OnMouseUp()
     {
-        Debug.Log("OnMouseUp");
-    }
-
-    public void OnMouseDown()
-    {
-        Debug.Log("OnMouseDown");
+        GameDataManager.Instance.EnterGameScene(gameSceneItemData.scene_id);
     }
 }
