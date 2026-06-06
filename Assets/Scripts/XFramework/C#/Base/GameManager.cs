@@ -31,12 +31,13 @@ namespace XFramework
             await AudioManager.Instance.Initialized();
             await UISystem.Instance.Initialized();
             await ExcelMgr.Instance.Initialized();
+            await GameDataManager.Instance.Initialized();
             StarGame();
         }
 
         private void StarGame()
         {
-            
+            _commonUI.Init();
         }
         
     }
