@@ -15,8 +15,26 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Korean (ko)
   m_GUID: bc66272146181034ba71c9a2b67daa4b
   m_SerializeEntries:
-  - m_GUID: f4c3818f0bb65c74187d471fc76cefd1
-    m_Address: UITableText_ko
+  - m_GUID: 5931dd8b597eeb145ba5069c690b998a
+    m_Address: UIText_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64383c073fdb55d45a62751409b3f733
+    m_Address: CommonUI_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66292ba8a31e59943bcf4041637ce426
+    m_Address: SetUserNameUI_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a439f5bda0321c04384c992493fad4a2
+    m_Address: LoadSaveGameUI_ko
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ko

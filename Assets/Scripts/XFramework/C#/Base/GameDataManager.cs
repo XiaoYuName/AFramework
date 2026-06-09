@@ -17,9 +17,6 @@ public class GameDataManager : MonoSingleton<GameDataManager>,IGameInitialized
     [LabelText("当前存档用户数据"),ReadOnly]
     public User CurrentUser { get; private set; }
 
-    [LabelText("默认用户配置")] 
-    public User DefaultUser;
-
     [FoldoutGroup("Configs"),LabelText("大场景配置表")]
     public GameSceneDataManager GameSceneData;
     
@@ -39,7 +36,6 @@ public class GameDataManager : MonoSingleton<GameDataManager>,IGameInitialized
     private async UniTask LoadSaveFile()
     {
         //TODO: 存档加载
-        CurrentUser = DefaultUser;
         await UniTask.CompletedTask;
     }
 
@@ -50,6 +46,22 @@ public class GameDataManager : MonoSingleton<GameDataManager>,IGameInitialized
     {
         await UniTask.CompletedTask;
     }
+
+    #region User增删改查
+
+    public void SetUserName(string userName)
+    {
+        SaveGameManager.Instance.CreatUser(userName);
+        CurrentUser = SaveGameManager.Instance.SelectUser; 
+    }
+
+    public void CreatUser(int idx, string userName)
+    {
+        SaveGameManager.Instance.CreatUser(idx,userName);
+        CurrentUser = SaveGameManager.Instance.SelectUser; 
+    }
+
+    #endregion
 
     #region BindEvent
     private Action<User> onUserChanger;
@@ -116,6 +128,12 @@ public class User
     /// 创建时间
     /// </summary>
     public DateTime CreateTime;
+
+    [LabelText("用户名")]
+    public string UserName;
+
+    [LabelText("游戏内天数")]
+    public int Day;
 
     [LabelText("体力")]
     public int Strength;

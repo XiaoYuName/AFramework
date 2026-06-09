@@ -138,6 +138,20 @@ namespace XFramework
             button.OnClick.AddListener(UnityAction);
         }
 
+        protected virtual void BindColorClick(ColorButton button, Action func, string audio_id)
+        {
+            button.OnClick = null;
+            void UnityAction()
+            {
+                func?.Invoke();
+                if (!string.IsNullOrEmpty(audio_id))
+                {
+                    AudioManager.Instance.PlayAudio(audio_id);
+                }
+            }
+
+            button.OnClick = UnityAction;
+        }
     }
 }
 
